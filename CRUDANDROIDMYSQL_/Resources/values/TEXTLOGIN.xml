@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string name="usuario">Usuário :</string>
+  <string name="senha">Senha :</string>
+  <string name="acesso">Acesso</string>
+  <string name="menu">EMPRESA</string>
+  <string name="create">Create</string>
+  <string name="select">Select</string>
+  <string name="delete">Delete</string>
+  <string name="update">Update</string>
+  <string name="create_sexo">Sexo</string>
+  <string name="create_f">Feminino</string>
+  <string name="create_m">Masculino</string>
+  <string name="nome">Nome</string>
+</resources>

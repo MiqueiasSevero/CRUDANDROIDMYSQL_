@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:padding="20dp">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_height="300dp"
+        android:layout_width="300dp"
+        android:layout_gravity="center" />
+    <TextView
+        android:text="Login"
+        style="@style/login" />
+    <EditText
+        android:id="@+id/campoLogin"
+        android:inputType="text"
+        style="@style/login">
+        <requestFocus />
+    </EditText>
+    <TextView
+        android:text="Senha"
+        style="@style/login" />
+    <EditText
+        android:id="@+id/campoSenha"
+        android:inputType="textPassword"
+        style="@style/login" />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/btlogin"
+        android:text="acesso"
+        android:layout_gravity="center" />
+</LinearLayout>
