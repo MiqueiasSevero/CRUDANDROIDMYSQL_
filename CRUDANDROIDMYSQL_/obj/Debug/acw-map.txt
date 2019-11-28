@@ -22,3 +22,7 @@ CRUDANDROIDMYSQL_.select, CRUDANDROIDMYSQL_;md5fd0319144f93cbe5f43eb1b2fe735d69.
 CRUDANDROIDMYSQL_.select, CRUDANDROIDMYSQL_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5fd0319144f93cbe5f43eb1b2fe735d69.select
 CRUDANDROIDMYSQL_.select;md5fd0319144f93cbe5f43eb1b2fe735d69.select
 crudandroidmysql_.select;md5fd0319144f93cbe5f43eb1b2fe735d69.select
+CRUDANDROIDMYSQL_.Update, CRUDANDROIDMYSQL_;md5fd0319144f93cbe5f43eb1b2fe735d69.Update
+CRUDANDROIDMYSQL_.Update, CRUDANDROIDMYSQL_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5fd0319144f93cbe5f43eb1b2fe735d69.Update
+CRUDANDROIDMYSQL_.Update;md5fd0319144f93cbe5f43eb1b2fe735d69.Update
+crudandroidmysql_.Update;md5fd0319144f93cbe5f43eb1b2fe735d69.Update

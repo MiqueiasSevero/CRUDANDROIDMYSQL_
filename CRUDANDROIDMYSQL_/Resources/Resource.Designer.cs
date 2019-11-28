@@ -868,6 +868,9 @@ namespace CRUDANDROIDMYSQL_
 			// aapt resource value: 0x7f070001
 			public const int campoEmail = 2131165185;
 			
+			// aapt resource value: 0x7f070010
+			public const int campoId = 2131165200;
+			
 			// aapt resource value: 0x7f070005
 			public const int campoLogin = 2131165189;
 			
@@ -934,6 +937,9 @@ namespace CRUDANDROIDMYSQL_
 			
 			// aapt resource value: 0x7f030005
 			public const int Select = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int Update = 2130903046;
 			
 			static Layout()
 			{

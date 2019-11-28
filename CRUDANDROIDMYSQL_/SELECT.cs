@@ -54,7 +54,7 @@ namespace CRUDANDROIDMYSQL_
 
         //APLICA OS EVENTOS DA INTERFACE
 
-        public void onDelete(string value)
+        public void  onDelete(string value)
         {
             // VALOR PASSADO PELO IVENTE DELETE QUE ESTA NO LISTVIEWBASEADAPTER
             //Toast.MakeText(this, value, ToastLength.Long).Show();
@@ -69,62 +69,40 @@ namespace CRUDANDROIDMYSQL_
             alert.SetMessage("DESEJA EXCLUIR");
 
             //EVENTO
-            alert.SetPositiveButton("OK", (senderAlert, args) =>
+            alert.SetPositiveButton("OK", async(senderAlert, args) =>
               {
-                  Toast.MakeText(this, value, ToastLength.Long).Show();
+                  //Toast.MakeText(this, value, ToastLength.Long).Show();
                   DeleteRegistro(int.Parse(value));
-                  // bool resultado = campo.deleteRegistro(value);
-                  //    dado = campo.selecaoPessoa();
-                  //    adapter = new ListViewBaseAdapter(this, dado);
-                  //    adapter.SetEvento(this);
-                  //    ltv.Adapter = adapter;
+                         
+                  dado = await Resgistro();
+                  adapter = new ListViewBaseAdapter(this, dado);
+                  adapter.SetEvento(this);
+                  ltv.Adapter = adapter;
               });
 
             alert.SetNegativeButton("NO", (senderAlert, args) =>
             {
-                //    adapter = new ListViewBaseAdapter(this, dado);
-                //    adapter.SetEvento(this);
-                //    ltv.Adapter = adapter;
-                //});
-                // alert.Show();
-                // RECEBER O ID  REGISTRO
-                /*
-                bool resultado = campo.deleteRegistro(value);
-                if (resultado)
-                {
-                    //mandar carregar de novo os dados
-                    dado = campo.selecaoPessoa();
-                    adapter = new ListViewBaseAdapter(this, dado);
-                    adapter.SetEvento(this);
-                    ltv.Adapter = adapter;
-                   // ManipulaDados.op.Close();
-                }
-                else {
-                    Toast.MakeText(this, "erro", ToastLength.Long).Show();
-                }
-
-            //  //  adapter.NotifyDataSetChanged();
-            //    // Modify the data 
-            //    //PessoaRepositorio.pes.Remove();
-
-            //    // Notify the ListView about the data change
-            //    // adapter.NotifyDataSetChanged();
-            //*/
+                   adapter = new ListViewBaseAdapter(this, dado);
+                   adapter.SetEvento(this);
+                   ltv.Adapter = adapter;
             });
+            alert.Show();
+             adapter.NotifyDataSetChanged();
+        
 
-           // alert.Show();
+
 
         }
 
         public void onUpdate(string value)
         {
-            //PASSAR PARA A TELA O ID
-            /*    Intent pagUpdate = new Intent(this, typeof(UPDATE));
+            //PASSAR PARA A TELA COM ID
+                Intent pagUpdate = new Intent(this, typeof(Update));
                 Bundle parametro = new Bundle();
                 parametro.PutString("id", value);
                 pagUpdate.PutExtras(parametro);
                 StartActivity(pagUpdate);
-                */
+               
         }
 
 
@@ -169,7 +147,9 @@ namespace CRUDANDROIDMYSQL_
         {
 
             // URIL
-            string uri = "http://10.131.45.51/CRUDANDROID/" + "delete.php";
+
+            string uri = "http://10.131.45.51/CRUDANDROID/" +
+                "delete.php";
 
             // CRIA OBJETO DE ENVIO
             HttpClient solicita = new HttpClient();
@@ -186,13 +166,17 @@ namespace CRUDANDROIDMYSQL_
 
             //EXISTE 3 CONSTRUTORES
             //O ARQUIVO, TIPO DE COD. CARACATRES, APLICATIVO MIMW
-            var contentString = new StringContent(cvJason, Encoding.UTF8, "application/json");
+            var contentString = new StringContent(cvJason, Encoding.UTF8,
+                "application/json");
 
-            //Representa um tipo de mídia usado em um cabeçalho Content-Type, conforme definido no RFC
-            contentString.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            //Representa um tipo de mídia usado em um cabeçalho 
+            //Content -Type, conforme definido no RFC
+            contentString.Headers.ContentType =
+                new MediaTypeHeaderValue("application/json");
 
             //ENVIAR O DADOS
-            HttpResponseMessage resultado = await solicita.PostAsync(uri, contentString);
+            HttpResponseMessage resultado =
+                await solicita.PostAsync(uri, contentString);
 
             Console.WriteLine(" resp: " + resultado.IsSuccessStatusCode);
 
@@ -202,13 +186,17 @@ namespace CRUDANDROIDMYSQL_
 
             // saber a volta 
             Console.WriteLine("delete -> " + content);
-            // DESCOMPACTA O RESPOSTA VENDO SERVIDOR EM FORMA JSON PARA EM FORMA DICTIONARY
-            Dictionary<string, string> servidor = JsonConvert.DeserializeObject<Dictionary<string, string>>(content);
+            // DESCOMPACTA O RESPOSTA VENDO SERVIDOR EM FORMA JSON 
+            //PARA EM FORMA DICTIONARY
+            Dictionary<string, string> servidor =
+                JsonConvert.DeserializeObject<Dictionary<string, string>>
+                (content);
 
             if (servidor["resp"] == "sucesso")
             {
 
-                Toast.MakeText(this, "DELETADO COM SUCESSO", ToastLength.Long).Show();
+                Toast.MakeText(this, "DELETADO COM SUCESSO", ToastLength.Long)
+                    .Show();
                 //ATRIBUI OS DADOS RETORNAN DO AO CLASSE E FORMA DE LIST<>
                 dado = await Resgistro();
 

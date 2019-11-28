@@ -16,6 +16,7 @@
     <activity android:label="CRUDANDROIDMYSQL_" android:name="md5fd0319144f93cbe5f43eb1b2fe735d69.MainActivity" />
     <activity android:label="MENU" android:name="md5fd0319144f93cbe5f43eb1b2fe735d69.MENU" />
     <activity android:label="select" android:name="md5fd0319144f93cbe5f43eb1b2fe735d69.select" />
+    <activity android:label="Update" android:name="md5fd0319144f93cbe5f43eb1b2fe735d69.Update" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="CRUDANDROIDMYSQL_.CRUDANDROIDMYSQL_.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

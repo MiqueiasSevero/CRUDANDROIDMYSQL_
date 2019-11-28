@@ -172,5 +172,6 @@ C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\obj\Debug\linksrc\System.Tra
 C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\obj\Debug\linksrc\System.Web.Services.pdb
 C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\obj\Debug\linksrc\System.Xml.Linq.pdb
 C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\obj\Debug\linksrc\System.Xml.pdb
+C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\obj\Debug\res\layout\update.xml
 C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\bin\Debug\CRUDANDROIDMYSQL_.dll
 C:\workspace\c#\CRUDANDROIDMYSQL_\CRUDANDROIDMYSQL_\obj\Debug\linksrc\CRUDANDROIDMYSQL_.dll.mdb

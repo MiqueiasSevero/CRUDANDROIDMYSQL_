@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Newtonsoft.Json;
 
 namespace CRUDANDROIDMYSQL_.Modelo
 {
@@ -16,16 +17,19 @@ namespace CRUDANDROIDMYSQL_.Modelo
     {
 
 
-        
+
 
         // cada campo de formulario vai ter um 
         //propriedade/varivel para referenciar o c# via json
-        public string id_us { get; set; }
-       public string nome_us { get; set; }
-   
-       public string email_us { get; set; }  
+        [JsonProperty(PropertyName ="id")]
 
-       public string senha_us { get; set;}
+        public string id_us { get; set; }
+        [JsonProperty(PropertyName = "nome")]
+        public string nome_us { get; set; }
+        [JsonProperty(PropertyName = "email")]
+        public string email_us { get; set; }
+        [JsonProperty(PropertyName = "senha")]
+        public string senha_us { get; set;}
        
         
 

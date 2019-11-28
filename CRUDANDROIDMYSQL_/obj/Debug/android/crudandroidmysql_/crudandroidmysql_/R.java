@@ -319,6 +319,7 @@ public final class R {
         public static final int btVoltar=0x7f070003;
         public static final int btlogin=0x7f070006;
         public static final int campoEmail=0x7f070001;
+        public static final int campoId=0x7f070010;
         public static final int campoLogin=0x7f070005;
         public static final int campoNome=0x7f070000;
         public static final int campoSenha=0x7f070002;
@@ -339,6 +340,7 @@ public final class R {
         public static final int menu=0x7f030003;
         public static final int modelolistview=0x7f030004;
         public static final int select=0x7f030005;
+        public static final int update=0x7f030006;
     }
     public static final class string {
         public static final int acesso=0x7f060003;
